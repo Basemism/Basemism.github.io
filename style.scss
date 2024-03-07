@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+:root {
+  --bg-color: #0C134F;
+  --text-color: #FFFFFF;
+  --purpleDark: #0C134F;
+  --purpleMedium: #1D267D;
+  --purpleLight: #5C469C;
+}
 
-// Base
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway&display=swap');
+
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -12,21 +17,22 @@ html {
   height: auto;
   min-height: 100%;
   width: 100%;
-  font-size: max(24px, 3vw);
-  line-height: 1.4;
+  font-size: clamp(16px, 2vw, 24px);
+  line-height: 1.8;
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
-  color: black;
-  background: white;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  background-image: var(--bg-color);
 }
 
 body {
+  margin: 0;
+  padding: 0;
   display: block;
   min-height: 100vh;
   overflow: hidden;
 } 
 
-// Smooth scroll
 .lenis {
   &.lenis-smooth {
     scroll-behavior: auto;
@@ -45,29 +51,61 @@ body {
   }
 }
 
-// Layout
-section {
+.section {
+  position: relative;
+  display: flex;
+  min-height: calc(100vh + 5vw);
+  padding-top: 5vw;
+  margin-top: -5vw;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 5vw 5vw 0 0;
+
+  &-img {
+    position: relative;
+    height: calc(100vh + 5vw);
+    margin-top: -5vw;
+    width: 100%;
+    
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.inner {
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  width: 100%;
 }
 
 .container {
-  position: relative;
-  max-width: 60%;
-  margin: 0 auto;
+  padding: 8vw 3vw 5vw;
 }
 
-// Text reveal
-.text-reveal {
-  font-kerning: none;
-
-  .line-wrapper {
-    overflow: hidden;
+.bg {
+  &-purpleDark {
+    background-color: var(--purpleDark);
   }
 
-  .line {
-    transform: translate3d(0, 100%, 0);
+  &-purpleMedium {
+    background-color: var(--purpleMedium);
   }
+
+  &-purpleLight {
+    background-color: var(--purpleLight);
+  }
+}
+
+h2 {
+  font-size: 4rem;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+  margin-top: 0;
 }

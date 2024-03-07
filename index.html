@@ -1,80 +1,42 @@
-
-<body translate=&quot;no&quot;>
-  <html>
-    <div class=&quot;app&quot;><section>
-        <div class=&quot;container&quot;>
-          <p class=&quot;text-reveal&quot;>Hi! I'm Basem Mohammed</p>
+<!DOCTYPE html>
+<div class="app">
+    <section class="section bg-purpleDark">
+      <div class="inner">
+        <div class="container">
+          <h2>Unraveling the Secrets of the Universe</h2>
+          <p>The mysteries of the cosmos have captivated the human imagination for millennia. In the vast expanse of the universe, celestial bodies dance to an intricate rhythm, weaving a tapestry of cosmic wonder. As scientists delve deeper into the unknown, they uncover previously unfathomable phenomena, from the birth of stars to the enigmatic nature of dark matter. Each new discovery reveals a small piece of a much larger puzzle, tantalizing us with the prospect of unraveling the very fabric of existence.</p>
         </div>
         </section>
-        <section>
-          <div class=&quot;container&quot;>
-            <p class=&quot;text-reveal&quot;>Welcome to my portfolio</p>
-          </div>
-        </section>
       </div>
-</html>
-  
-      <script id=&quot;rendered-js&quot; >
-const debounce = (func, timeout = 300) => {
-  let timer;
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {func.apply(this, args);}, timeout);
-  };
-};
-
-gsap.registerPlugin(ScrollTrigger);
-
-// Scroll
-const lenis = new Lenis({
-  lerp: 0.07 });
-
-
-lenis.on('scroll', ScrollTrigger.update);
-gsap.ticker.add(time => {
-  lenis.raf(time * 1000);
-});
-
-// Reveal animation
-const setTextRevealAnimations = () => {
-  document.querySelectorAll('.text-reveal').forEach(text => {
-    // Split text
-    let splitText = new SplitType(text);
-
-    splitText.lines.forEach(line => {
-      const lineWrapper = document.createElement('div');
-      lineWrapper.classList.add('line-wrapper');
-      text.insertAdjacentElement('beforeEnd', lineWrapper);
-      lineWrapper.appendChild(line);
-    });
-
-    // Animation
-    const section = text.closest('section');
-    gsap.to(splitText.lines, {
-      y: 0,
-      ease: &quot;power1.inOut&quot;,
-      stagger: .15,
-      scrollTrigger: {
-        trigger: text,
-        start: 'top bottom',
-        // markers: true,
-        toggleActions: 'play reset play reset' } });
-
-
-  });
-};
-
-setTextRevealAnimations();
-
-// Handle resize
-const resizeObserver = new ResizeObserver(
-debounce(([entry]) => {
-  setTextRevealAnimations();
-}, 500));
-
-resizeObserver.observe(document.body);
-//# sourceURL=pen.js
-    </script>
-
-  
-</body>
+    <section class="section section--img">
+      <div class="inner">
+        <div class="section-img">
+           <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1600&q=80" />
+        </div>
+       
+      </div>
+    </section>
+    <section class="section bg-purpleMedium">
+      <div class="inner">
+        <div class="container">
+          <h2>A Journey Through Mythical Landscapes</h2>
+          <p>Enveloped in the shroud of the cosmic void, black holes stand as the ultimate cosmic enigma. These celestial entities, seemingly invisible to the naked eye, hold within them the power to warp space-time, defying the limits of our understanding. As their immense gravitational pull devours all in their path, they hold the key to unlocking the deepest secrets of the universe. The quest to decipher the enigmatic nature of these celestial behemoths promises to forever alter our understanding of reality.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section section--img">
+      <div class="inner">
+        <div class="section-img">
+            <img src="https://images.unsplash.com/photo-1682955153155-fc7c7beb7c44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1567&q=80" />
+        </div>
+      </div>
+    </section>
+    <section class="section bg-purpleLight">
+      <div class="inner">
+        <div class="container">
+          <h2>Exploring the Patterns of Nature</h2>
+          <p>Beyond the borders of the known world lies a realm of enchantment and wonder, steeped in myth and legend. In these enchanted realms, ancient creatures roam vast forests, their whispered tales echoing through time. From the majestic dragon soaring high above the clouds to the elusive unicorn hidden in the depths of the emerald woods, these mythical beings have captivated the human spirit, serving as symbols of our deepest fears and greatest aspirations.</p>
+        </div>
+      </div>
+    </section>
+  </div>
