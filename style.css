@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
-
-// Base
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,37 +13,30 @@ html {
   font-size: clamp(16px, 2vw, 24px);
   line-height: 1.4;
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
-  color: white;
-  background-image: linear-gradient(to right, #2F586A, #1E121C);
+  font-family: "Poppins", sans-serif;
+  color: rgb(43, 43, 43);
+  background-image: linear-gradient(to right, #c1fdee, #5dc09a);
 }
 
 body {
   display: block;
   min-height: 100vh;
   overflow: hidden;
-} 
-
-// Smooth scroll
-.lenis {
-  &.lenis-smooth {
-    scroll-behavior: auto;
-
-    [data-lenis-prevent] {
-      overscroll-behavior: contain;
-    }
-  }
-
-  &.lenis-stopped {
-    overflow: hidden;
-  }
-
-  &.lenis-scrolling iframe {
-    pointer-events: none;
-  }
 }
 
-// Layout
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 section {
   display: flex;
   align-items: center;
@@ -59,7 +50,6 @@ section {
   margin: 0 auto;
 }
 
-// Reveal
 .reveal {
   font-kerning: none;
   text-transform: uppercase;
