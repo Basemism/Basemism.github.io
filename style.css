@@ -15,7 +15,7 @@ html {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   color: rgb(43, 43, 43);
-  background-image: linear-gradient(to right, #c1fdee, #5dc09a);
+  background-image: linear-gradient(to right, #ffc4f2, #6bd2da);
 }
 
 body {
@@ -65,31 +65,75 @@ section {
   line-height: 1.4;
 }
 
-.card {
-  background-color: #c1fdee;
-  border-radius: 20px;
+.card2 {
+  background-color: #ffffff00;
+  border-radius: 15px;
+  /* border: 5px solid #2d2e2e; */
+  
+  /* border-image: linear-gradient(to right, #e3fff9, #bcf6fa) 1; */
   padding: 20px;
-  box-shadow: 10px 10px 0px rgba(0, 77, 30, 0.336);
+  margin: 20px;
+  text-align: center;
+  backdrop-filter: blur(5px); /* Add blur effect */
+}
+
+.card3 {
+  background-color: #99e2e2;
+  border: 1px solid #2d2e2e;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 10px 0px rgba(0, 72, 77, 0.1);
+  margin: 20px;
+  text-align: center;
+}
+
+.card1 {
+  background-color: #caeeee;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 5px 0px rgba(255, 255, 255, 0.637) 0px -5px 0px rgba(0, 72, 77, 0.1);
   margin: 20px;
   text-align: center;
 }
 
 h3 {
-  font-size: 1rem;
+  font-kerning: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
   margin-bottom: 1rem;
+  text-align: center;
   color: #2d2e2e;
 }
 
 h4 {
-  font-size: 0.8rem;
+  font-kerning: none;
+  text-transform: uppercase;
+  font-size: 0.6rem;
   margin-bottom: 1rem;
+  text-align: center;
   color: #2d2e2e;
+
 }
 
 h1 {
-  font-size: 2rem;
+  font-kerning: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
   color: #2d2e2e;
+  text-align: center;
+  padding: 1rem;
 }
 
-
+p {
+  padding: 1.5rem;
+}
+.text-reveal {
+  font-kerning: none;
+}
+.text-reveal .line-wrapper {
+  overflow: hidden;
+}
+.text-reveal .line {
+  transform: translate3d(0, 100%, 0);
+}
