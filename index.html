@@ -1,16 +1,80 @@
-<div class="app"><section>
-    <div class="container">
-        <p class="text-reveal">Hi! I'm Basem Mohammed</p>
-    </div>
-    </section>
-    <section>
-        <div class="container">
-        <p class="text-reveal">Welcome to my portfolio</p>
+
+<body translate=&quot;no&quot;>
+  <html>
+    <div class=&quot;app&quot;><section>
+        <div class=&quot;container&quot;>
+          <p class=&quot;text-reveal&quot;>Hi! I'm Basem Mohammed</p>
         </div>
-    </section>
-    <section>
-        <div class="container">
-        <p class="text-reveal">About me</p>
-        </div>
-    </section>
-    </div>
+        </section>
+        <section>
+          <div class=&quot;container&quot;>
+            <p class=&quot;text-reveal&quot;>Welcome to my portfolio</p>
+          </div>
+        </section>
+      </div>
+</html>
+  
+      <script id=&quot;rendered-js&quot; >
+const debounce = (func, timeout = 300) => {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {func.apply(this, args);}, timeout);
+  };
+};
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Scroll
+const lenis = new Lenis({
+  lerp: 0.07 });
+
+
+lenis.on('scroll', ScrollTrigger.update);
+gsap.ticker.add(time => {
+  lenis.raf(time * 1000);
+});
+
+// Reveal animation
+const setTextRevealAnimations = () => {
+  document.querySelectorAll('.text-reveal').forEach(text => {
+    // Split text
+    let splitText = new SplitType(text);
+
+    splitText.lines.forEach(line => {
+      const lineWrapper = document.createElement('div');
+      lineWrapper.classList.add('line-wrapper');
+      text.insertAdjacentElement('beforeEnd', lineWrapper);
+      lineWrapper.appendChild(line);
+    });
+
+    // Animation
+    const section = text.closest('section');
+    gsap.to(splitText.lines, {
+      y: 0,
+      ease: &quot;power1.inOut&quot;,
+      stagger: .15,
+      scrollTrigger: {
+        trigger: text,
+        start: 'top bottom',
+        // markers: true,
+        toggleActions: 'play reset play reset' } });
+
+
+  });
+};
+
+setTextRevealAnimations();
+
+// Handle resize
+const resizeObserver = new ResizeObserver(
+debounce(([entry]) => {
+  setTextRevealAnimations();
+}, 500));
+
+resizeObserver.observe(document.body);
+//# sourceURL=pen.js
+    </script>
+
+  
+</body>
