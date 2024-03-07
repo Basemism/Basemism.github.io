@@ -50,6 +50,13 @@ section {
   margin: 0 auto;
 }
 
+.container2 {
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
 .reveal {
   font-kerning: none;
   text-transform: uppercase;
@@ -57,3 +64,32 @@ section {
   font-size: 1.4rem;
   line-height: 1.4;
 }
+
+.card {
+  background-color: #c1fdee;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 10px 10px 0px rgba(0, 77, 30, 0.336);
+  margin: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #2d2e2e;
+}
+
+h4 {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: #2d2e2e;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2d2e2e;
+}
+
+
