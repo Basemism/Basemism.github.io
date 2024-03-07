@@ -1,15 +1,10 @@
-:root {
-  --bg-color: #0C134F;
-  --text-color: #FFFFFF;
-  --purpleDark: #0C134F;
-  --purpleMedium: #1D267D;
-  --purpleLight: #5C469C;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway&display=swap');
-
+// Base
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -18,21 +13,20 @@ html {
   min-height: 100%;
   width: 100%;
   font-size: clamp(16px, 2vw, 24px);
-  line-height: 1.8;
+  line-height: 1.4;
   overflow-x: hidden;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: white;
-  background-image: var(--bg-color);
+  background-image: linear-gradient(to right, #2F586A, #1E121C);
 }
 
 body {
-  margin: 0;
-  padding: 0;
   display: block;
   min-height: 100vh;
   overflow: hidden;
 } 
 
+// Smooth scroll
 .lenis {
   &.lenis-smooth {
     scroll-behavior: auto;
@@ -51,61 +45,25 @@ body {
   }
 }
 
-.section {
-  position: relative;
-  display: flex;
-  min-height: calc(100vh + 5vw);
-  padding-top: 5vw;
-  margin-top: -5vw;
-  overflow: hidden;
-  align-items: center;
-  border-radius: 5vw 5vw 0 0;
-
-  &-img {
-    position: relative;
-    height: calc(100vh + 5vw);
-    margin-top: -5vw;
-    width: 100%;
-    
-    & > img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-}
-
-.inner {
-  height: 100vh;
+// Layout
+section {
   display: flex;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .container {
-  padding: 8vw 3vw 5vw;
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
-.bg {
-  &-purpleDark {
-    background-color: var(--purpleDark);
-  }
-
-  &-purpleMedium {
-    background-color: var(--purpleMedium);
-  }
-
-  &-purpleLight {
-    background-color: var(--purpleLight);
-  }
-}
-
-h2 {
-  font-size: 4rem;
-  font-family: 'Playfair Display', serif;
-  line-height: 1.2;
-  margin-top: 0;
+// Reveal
+.reveal {
+  font-kerning: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.4;
 }
