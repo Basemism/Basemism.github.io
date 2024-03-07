@@ -1,40 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basem Mohammed: Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Your Name - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        header img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 2rem;
+        }
+        main section {
+            flex-basis: calc(33.333% - 2rem);
+            margin: 1rem;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<header>
-    <h1>Basem Mohammed</h1>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section id="about">
-    <h2>About Me</h2>
-    <p>TBC</p>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-    <p>TBC</p>
-</section>
-
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>TBC</p>
-</section>
-
-<footer>
-    <p>&copy; 2024 Basem Mohammed. All rights reserved.</p>
-</footer>
+    <header>
+        <img src="profile-picture.jpg" alt="Your Name">
+        <h1>Your Name</h1>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Write a short bio here.</p>
+        </section>
+        <section id="academic-projects">
+            <h2>Academic Projects</h2>
+            <ul>
+                <li>Project 1</li>
+                <li>Project 2</li>
+                <li>Project 3</li>
+            </ul>
+        </section>
+        <section id="personal-projects">
+            <h2>Personal Projects</h2>
+            <ul>
+                <li>Project 1</li>
+                <li>Project 2</li>
+                <li>Project 3</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Follow me on GitHub: <a href="https://github.com/yourgithubusername">yourgithubusername</a></p>
+    </footer>
 </body>
 </html>
