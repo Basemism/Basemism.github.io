@@ -15,7 +15,22 @@ html {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   color: rgb(43, 43, 43);
-  background-image: linear-gradient(to right, #ffc4f2, #6bd2da);
+  background-image: linear-gradient(to right, #81e0e7, #ffc4f2,#81e0e7);
+  background-size: 300% 300%;
+	animation: gradient 25s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 body {
