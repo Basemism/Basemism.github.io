@@ -28,7 +28,7 @@ document.querySelectorAll('.reveal').forEach(text => {
     scrollTrigger: {
       trigger: section,
       start: 'top top', 
-      end: () => `+=${window.innerHeight * 1}px`,
+      end: () => `+=${window.innerHeight * 3}px`,
       scrub: true,
       // markers: true,
       pin: true,
